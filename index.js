@@ -1,4 +1,4 @@
-import express from "express"
+import Express from "express"
 import category from "./routes/category.route.js";
 import sub_cate from "./routes/sub_category.route.js";
 import hostconnect from "./config/db.js";
@@ -7,8 +7,8 @@ import { user } from "./routes/user.route.js";
 import { reviewrating } from "./routes/review.rating.route.js";
 import { config } from 'dotenv';
 config();
-const app = express();
-app.use(express.json());
+const app = Express();
+app.use(Express.json());
 hostconnect();
 app.use(category)
 app.use(sub_cate)
